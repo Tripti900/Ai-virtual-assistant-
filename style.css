@@ -1,0 +1,141 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e6ccff, #ffcce7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  background: white;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 🌈 Header area with mode dropdown */
+.header {
+  background: linear-gradient(135deg, #d68fff, #ff8fcf);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 📘 Mode selector style */
+.mode-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.mode-select label {
+  color: #fff;
+  font-weight: 500;
+}
+
+.mode-select select {
+  background: linear-gradient(135deg, #e6b3ff, #ffb3d9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.mode-select select:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,180,230,0.6);
+}
+
+#chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fffafc;
+}
+
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  line-height: 1.4;
+}
+
+.message.user {
+  background-color: #ffb3de;
+  align-self: flex-end;
+  color: white;
+}
+
+.message.bot {
+  background-color: #e2c4ff;
+  align-self: flex-start;
+  color: #3b0066;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-top: 2px solid #f2d7f7;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #d3a8f7;
+  outline: none;
+}
+
+#send-btn {
+  background: linear-gradient(135deg, #c77dff, #ff7eb9);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#send-btn:hover {
+  background: linear-gradient(135deg, #b85cff, #ff66a3);
+}
+
+/* 🎤 Mic listening animation */
+.listening {
+  animation: mic-glow 1s infinite alternate;
+}
+
+@keyframes mic-glow {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 5px #e6b3ff;
+  }
+  to {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff99cc;
+  }
+}
